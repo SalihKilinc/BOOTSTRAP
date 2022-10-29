@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="sayi">
+    <input type="button" id="hesapla" value="HESAPLA">
+    <div id="Reponse"></div>
+<script src="app.js"> 
+var txtsayi=document.getElementById("sayi");
+var btnHesapla=document.getElementById("hesapla");
+btnHesapla.onclick=function(){
+    var sayi=Number(txtsayi.value);
+    var tek=0,cift=0,toplam=0;
+    for(var i=1;i<=sayi;i++)
+        {
+            if(i%2==0)
+                {
+                    cift+=i;
+                }
+            else
+                {
+                    tek+=i;
+                }
+        }document.getElementById("sonuc-goster").innerHTML="Tek sayıların toplamı : "+tek+"<BR>"+"Çift sayıların toplamı : "+cift;
+	}
+
+</script>
+
+</body>
+</html>
